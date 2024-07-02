@@ -81,6 +81,10 @@
     height: 1rem;
   }
   
+  /*
+   * Sidebar
+   */
+  
   @media (min-width: 768px) {
     .sidebar .offcanvas-lg {
       position: -webkit-sticky;
@@ -170,187 +174,191 @@ footer div{
     width: 100%;
 }
 
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.uploads {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.uploads h2 {
-    margin-bottom: 20px;
-}
-
-.upload-box {
-    justify-content: center;
-}
-
-.button-inside{
-    margin-top: 5px;
-}
-
-.drop-zone {
-    border: 2px dashed #b6b6b6;
-    padding: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    text-align: center;
-    flex: 1;
-    position: relative;
-}
-
-.small {
-    color: #b6b6b6;
-    margin-top: 10px;
-}
-
-.upload-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
-}
-
-.upload-form input {
-    padding: 10px;
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+  }
+  
+  .form-signin .form-floating:focus-within {
+    z-index: 2;
+  }
+  
+  .form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  
+  .form-signin input[type="password"] {
     margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
 
-.upload-form .form-group {
-    flex: 1; 
-    display: flex;
-    flex-wrap: nowrap; 
-    align-items: flex-start; 
-}
-
-.upload-form .form-group .input-group {
-    flex: 1; 
-    display: flex;
-    gap: 10px; 
-}
-
-.upload-form-button{
-    align-self: flex-start; 
-    margin-left: 10px; 
-}
-
-.cancel,
-.upload {
-    margin-top: 20px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.buttons{
-    margin-left: 80%;
-    color: #b6b6b6;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #95d5b2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.data-information table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-
-.data-information th,
-.data-information td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
-}
-
-.data-information th {
-    background-color: #f4f4f4;
-}
-
-.data-information td span {
-    color: #007bff;
-    cursor: pointer;
-}
-
-small {
-    color: #b6b6b6;
-}
-
-.hidden-input{
+.error-message {
+    color: red;
+    font-size: 0.9em;
     display: none;
 }
 
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    color: green;
+
+.login-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.login-container , .login-image {
+    height: 100%;
+}
+
+.login-image .img {
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 30px 10px 10px 10px; 
+    border-radius: 3px;
+    margin-bottom: 15px;
     border: none;
+    background-color: #F3F4F6;
+    position: relative;
+}
+
+input[type="email"]::placeholder,
+input[type="password"]::placeholder {
+    color: #ccc;
+    font-size: 12px; 
+    position: absolute;
+    top: 40px; 
+    left: 10px;
+}
+
+.floating-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+input[type="email"]:focus + .floating-label,
+input[type="password"]:focus + .floating-label,
+input[type="email"]:not(:placeholder-shown) + .floating-label,
+input[type="password"]:not(:placeholder-shown) + .floating-label {
+    top: 5px;
+    left: 10px;
+    font-size: 10px;
+    color: #333;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
 }
 
-.upload-form-button {
-    margin-top: 150px;
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
 }
 
-.button{
-    color: #fff;
-    background-color: #5CA72C;
-    border-radius: 5px;
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
 }
 
-.upload-form input[type="text"] {
-    border: 1px solid #5ca72c;
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
-table thead th{
-    color: #565D6D;
+.checkbox-container label {
+    color: #ccc;
+    cursor: pointer;
 }
 
-tbody tr td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+.checkbox-container input[type="checkbox"] {
+    margin-right: 5px;
+    width: 16px; 
+    height: 16px; 
+    appearance: none; 
+    border: 2px solid #ccc; 
+    border-radius: 3px; 
+    cursor: pointer;
+    position: relative;
+    background-color: #fff; 
 }
 
-.carbon-button{
-    margin-left: 72%;
+.checkbox-container input[type="checkbox"]:checked + label {
+    color: #ccc;
 }
 
-.carbon-button button {
-    border-radius: 7px;
-    background-color: #5CA72C;
-    color: #fff;
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
 }
 
-nav ul li a {
-    text-decoration: none; 
-    color: inherit; 
+.checkbox-container a {
+    margin-left: 70px;
+    color: green;
 }
 
-nav ul li a:hover {
-    color: #9FCC81; 
-}
-
-footer a {
+a {
+    color: #aaa;
     text-decoration: none;
-    color: inherit;
+    font-size: 12px;
+    display: block;
+    margin-bottom: 15px;
 }
 
-footer a:hover {
-    color: #9FCC81;
+a:hover {
+    color: #3e8e41;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.cta-button{
+  text-decoration: none;
+}
+
+#loginForm {
+  max-width: 500px;
+  margin-left: 35%;
+  margin-top: 100px;
 }

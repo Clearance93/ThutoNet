@@ -29,6 +29,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .cta-button:hover {
@@ -227,4 +228,9 @@ footer {
 .img {
     border-radius: 10px;
     box-shadow: 22px 7px grey;
+}
+
+.footer-content .social-media a img{
+  width: 28px;
+  border-radius: 50%;
 }

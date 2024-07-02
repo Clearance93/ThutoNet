@@ -81,6 +81,10 @@
     height: 1rem;
   }
   
+  /*
+   * Sidebar
+   */
+  
   @media (min-width: 768px) {
     .sidebar .offcanvas-lg {
       position: -webkit-sticky;
@@ -170,187 +174,79 @@ footer div{
     width: 100%;
 }
 
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.uploads {
-    background-color: white;
-    padding: 20px;
+.chat-container {
+    width: 400px;
+    background-color: #fff;
     border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.uploads h2 {
-    margin-bottom: 20px;
-}
-
-.upload-box {
-    justify-content: center;
-}
-
-.button-inside{
-    margin-top: 5px;
-}
-
-.drop-zone {
-    border: 2px dashed #b6b6b6;
-    padding: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    text-align: center;
-    flex: 1;
-    position: relative;
-}
-
-.small {
-    color: #b6b6b6;
-    margin-top: 10px;
-}
-
-.upload-form {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-left: 35%;
+    margin-top: 70px;
 }
 
-.upload-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
+.chat-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
 }
 
-.upload-form .form-group {
-    flex: 1; 
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    max-height: 500px;
+}
+
+.chat-messages .message {
+    margin-bottom: 1rem;
+}
+
+.chat-messages .message .username {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.chat-input {
     display: flex;
-    flex-wrap: nowrap; 
-    align-items: flex-start; 
+    padding: 0.5rem;
+    border-top: 1px solid #ddd;
 }
 
-.upload-form .form-group .input-group {
-    flex: 1; 
+.row {
     display: flex;
-    gap: 10px; 
-}
-
-.upload-form-button{
-    align-self: flex-start; 
-    margin-left: 10px; 
-}
-
-.cancel,
-.upload {
-    margin-top: 20px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.buttons{
-    margin-left: 80%;
-    color: #b6b6b6;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #95d5b2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.data-information table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
 }
 
-.data-information th,
-.data-information td {
+.col-md-8 {
+    flex: 2;
+    padding-right: 0.5rem;
+}
+
+.col-md-4 {
+    flex: 1;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.5rem;
     border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+    border-radius: 3px;
 }
 
-.data-information th {
-    background-color: #f4f4f4;
-}
-
-.data-information td span {
-    color: #007bff;
-    cursor: pointer;
-}
-
-small {
-    color: #b6b6b6;
-}
-
-.hidden-input{
-    display: none;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    color: green;
+.btn-primary {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: #fff;
     border: none;
+    border-radius: 3px;
     cursor: pointer;
 }
 
-.upload-form-button {
-    margin-top: 150px;
+.btn-primary:hover {
+    background-color: #0056b3;
 }
 
-.button{
-    color: #fff;
-    background-color: #5CA72C;
-    border-radius: 5px;
-}
-
-.upload-form input[type="text"] {
-    border: 1px solid #5ca72c;
-}
-
-table thead th{
-    color: #565D6D;
-}
-
-tbody tr td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.carbon-button{
-    margin-left: 72%;
-}
-
-.carbon-button button {
-    border-radius: 7px;
-    background-color: #5CA72C;
-    color: #fff;
-}
-
-nav ul li a {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-nav ul li a:hover {
-    color: #9FCC81; 
-}
-
-footer a {
-    text-decoration: none;
-    color: inherit;
-}
-
-footer a:hover {
-    color: #9FCC81;
-}

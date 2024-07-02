@@ -81,6 +81,10 @@
     height: 1rem;
   }
   
+  /*
+   * Sidebar
+   */
+  
   @media (min-width: 768px) {
     .sidebar .offcanvas-lg {
       position: -webkit-sticky;
@@ -169,188 +173,91 @@ footer div{
     display: flex;
     width: 100%;
 }
-
-
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.uploads {
-    background-color: white;
-    padding: 20px;
+.login-container {
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.uploads h2 {
-    margin-bottom: 20px;
-}
-
-.upload-box {
-    justify-content: center;
-}
-
-.button-inside{
-    margin-top: 5px;
-}
-
-.drop-zone {
-    border: 2px dashed #b6b6b6;
-    padding: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    text-align: center;
-    flex: 1;
-    position: relative;
-}
-
-.small {
-    color: #b6b6b6;
-    margin-top: 10px;
-}
-
-.upload-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
-}
-
-.upload-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
-
-.upload-form .form-group {
-    flex: 1; 
-    display: flex;
-    flex-wrap: nowrap; 
-    align-items: flex-start; 
-}
-
-.upload-form .form-group .input-group {
-    flex: 1; 
-    display: flex;
-    gap: 10px; 
-}
-
-.upload-form-button{
-    align-self: flex-start; 
-    margin-left: 10px; 
-}
-
-.cancel,
-.upload {
-    margin-top: 20px;
-    display: block;
-    margin-bottom: 10px;
-}
-
-.buttons{
-    margin-left: 80%;
-    color: #b6b6b6;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #95d5b2;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
-}
-
-.data-information table {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    margin-left: 35%;
+    margin-top: 70px;
 }
-
-.data-information th,
-.data-information td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+.login-container h2 {
+    margin-bottom: 1rem;
+    font-size: 24px;
+    text-align: center;
+    color: #333;
 }
-
-.data-information th {
-    background-color: #f4f4f4;
+.input-container {
+    position: relative;
+    margin-bottom: 1.5rem;
 }
-
-.data-information td span {
-    color: #007bff;
-    cursor: pointer;
-}
-
-small {
-    color: #b6b6b6;
-}
-
-.hidden-input{
-    display: none;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    color: green;
-    border: none;
-    cursor: pointer;
-}
-
-.upload-form-button {
-    margin-top: 150px;
-}
-
-.button{
-    color: #fff;
-    background-color: #5CA72C;
+.input-container input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 16px;
 }
-
-.upload-form input[type="text"] {
-    border: 1px solid #5ca72c;
+.input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #999;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
-
-table thead th{
-    color: #565D6D;
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    background-color: #fff;
+    padding: 0 5px;
+    color: #007bff;
+    font-size: 12px;
 }
-
-tbody tr td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+.password-toggle {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
-
-.carbon-button{
-    margin-left: 72%;
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    text-align: center;
 }
-
-.carbon-button button {
-    border-radius: 7px;
-    background-color: #5CA72C;
-    color: #fff;
+.checkbox-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
-
-nav ul li a {
-    text-decoration: none; 
-    color: inherit; 
+.checkbox-container label {
+    margin-left: 5px;
 }
-
-nav ul li a:hover {
-    color: #9FCC81; 
-}
-
-footer a {
+.checkbox-container a {
+    color: #007bff;
     text-decoration: none;
-    color: inherit;
 }
-
-footer a:hover {
-    color: #9FCC81;
+.checkbox-container a:hover {
+    text-decoration: underline;
+}
+button {
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
 }

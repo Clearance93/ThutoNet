@@ -81,6 +81,10 @@
     height: 1rem;
   }
   
+  /*
+   * Sidebar
+   */
+  
   @media (min-width: 768px) {
     .sidebar .offcanvas-lg {
       position: -webkit-sticky;
@@ -171,186 +175,53 @@ footer div{
 }
 
 
-.content {
-    flex: 1;
-    padding: 20px;
-}
-
-.uploads {
+.login-container, .management-tools {
     background-color: white;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
     margin-bottom: 20px;
 }
 
-.uploads h2 {
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: 15px;
 }
 
-.upload-box {
-    justify-content: center;
-}
-
-.button-inside{
-    margin-top: 5px;
-}
-
-.drop-zone {
-    border: 2px dashed #b6b6b6;
-    padding: 20px;
-    margin: 0 10px;
-    cursor: pointer;
-    text-align: center;
-    flex: 1;
-    position: relative;
-}
-
-.small {
-    color: #b6b6b6;
-    margin-top: 10px;
-}
-
-.upload-form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    flex-wrap: nowrap;
-}
-
-.upload-form input {
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 30px;
-}
-
-.upload-form .form-group {
-    flex: 1; 
-    display: flex;
-    flex-wrap: nowrap; 
-    align-items: flex-start; 
-}
-
-.upload-form .form-group .input-group {
-    flex: 1; 
-    display: flex;
-    gap: 10px; 
-}
-
-.upload-form-button{
-    align-self: flex-start; 
-    margin-left: 10px; 
-}
-
-.cancel,
-.upload {
-    margin-top: 20px;
+label {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
-.buttons{
-    margin-left: 80%;
-    color: #b6b6b6;
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #95d5b2;
+    padding: 10px 15px;
     border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
     border-radius: 5px;
-    cursor: pointer;
-    display: block;
-    margin: 0 auto;
+    transition: background-color 0.3s;
 }
 
-.data-information table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+button:hover {
+    background-color: #0056b3;
 }
 
-.data-information th,
-.data-information td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: left;
+#logout {
+    position: absolute;
+    top: 20px;
+    right: 20px;
 }
 
-.data-information th {
-    background-color: #f4f4f4;
-}
-
-.data-information td span {
-    color: #007bff;
-    cursor: pointer;
-}
-
-small {
-    color: #b6b6b6;
-}
-
-.hidden-input{
-    display: none;
-}
-
-.custom-file-upload {
-    display: inline-block;
-    padding: 10px 20px;
-    color: green;
-    border: none;
-    cursor: pointer;
-}
-
-.upload-form-button {
-    margin-top: 150px;
-}
-
-.button{
-    color: #fff;
-    background-color: #5CA72C;
-    border-radius: 5px;
-}
-
-.upload-form input[type="text"] {
-    border: 1px solid #5ca72c;
-}
-
-table thead th{
-    color: #565D6D;
-}
-
-tbody tr td img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-
-.carbon-button{
-    margin-left: 72%;
-}
-
-.carbon-button button {
-    border-radius: 7px;
-    background-color: #5CA72C;
-    color: #fff;
-}
-
-nav ul li a {
-    text-decoration: none; 
-    color: inherit; 
-}
-
-nav ul li a:hover {
-    color: #9FCC81; 
-}
-
-footer a {
-    text-decoration: none;
-    color: inherit;
-}
-
-footer a:hover {
-    color: #9FCC81;
+#login-message {
+    color: red;
+    margin-top: 10px;
 }
